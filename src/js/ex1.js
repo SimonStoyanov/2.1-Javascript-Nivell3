@@ -11,3 +11,9 @@ const Sum = (valueA, valueB) => {
     document.getElementById("result").innerHTML = "Invalid numbers inputed";
   }
 }
+
+// 1.2
+const randomNumber = () => {
+  var rand = Math.floor(Math.random() * 100);
+  document.getElementById("rand").innerHTML = `Generated a random number: ${rand}`;
+}

@@ -11992,7 +11992,6 @@ textarea.form-control-lg {
 /* Responsive button */
 .btn {
   width: auto;
-  max-width: 100px;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: none;
