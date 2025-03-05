@@ -40,3 +40,21 @@ const Greet = () => {
 
   _person.greet();
 }
+
+// 1.4
+const printNumbers = (arrayNum) => {
+  var _string = "";
+  
+  arrayNum.forEach(element => {
+    _string += element + " "
+    console.log(element);
+  });
+
+  document.getElementById("loopNum").innerHTML = `Array inputed: ${_string}`;
+}
+
+const handleArrayInput = () => {
+  const input = document.getElementById("numArray").value;
+  const _array = input.split(/[\s,]+/).map(num => parseFloat(num.trim()));
+  printNumbers(_array);
+}
