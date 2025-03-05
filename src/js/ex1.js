@@ -58,3 +58,15 @@ const handleArrayInput = () => {
   const _array = input.split(/[\s,]+/).map(num => parseFloat(num.trim()));
   printNumbers(_array);
 }
+
+// 1.5
+const printIn3sec = () => {
+  setTimeout(() => {
+    console.log("3 seconds have passed!");
+    document.getElementById("timedPrint").innerHTML = "3 seconds have passed!";
+  }, "3000");
+}
+
+const clearText = () => {
+  document.getElementById("timedPrint").innerHTML = "";
+}
