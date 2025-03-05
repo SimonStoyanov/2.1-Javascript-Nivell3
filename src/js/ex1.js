@@ -17,3 +17,26 @@ const randomNumber = () => {
   var rand = Math.floor(Math.random() * 100);
   document.getElementById("rand").innerHTML = `Generated a random number: ${rand}`;
 }
+
+// 1.3
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet(){
+    if (!this.name.trim()){
+      document.getElementById("greet").innerHTML = "Invalid name inputed";
+    }
+    else {
+      document.getElementById("greet").innerHTML = `Hello ${this.name}`;
+    }
+  }
+}
+
+const Greet = () => {
+  const inputName = document.getElementById("name").value;
+  const _person = new Person(inputName);
+
+  _person.greet();
+}
