@@ -1,0 +1,21 @@
+{
+  "name": "2.1-javascript-nivell3",
+  "version": "1.0.0",
+  "description": "📄 Description This project is a compilation of Javascript Exercises made for the IT Academy's course on Frontend",
+  "homepage": "https://github.com/SimonStoyanov/2.1-Javascript-Nivell3#readme",
+  "bugs": {
+    "url": "https://github.com/SimonStoyanov/2.1-Javascript-Nivell3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonStoyanov/2.1-Javascript-Nivell3.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {},
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
