@@ -24,6 +24,10 @@
     padding: 0.5rem;
     border-radius: 8px;
     border: 1px solid #ccc;
+
+    &.small-input{
+        max-width: 70px;
+    }
 }
 
 /* Responsive button */

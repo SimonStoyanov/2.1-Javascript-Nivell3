@@ -41,6 +41,26 @@
             <div class="mt-2" id="compare"></div>    
         </div>
     </section>
+    <section class="card text-center mt-3 justify-content-center align-items-center">
+        <div class="card-body container-fluid m-2 lh-sm shadow">
+            <h1>Exercise 2.3</h1>
+            <h3>Part A</h3>
+            <div class="d-flex flex-row gap-2 w-100 justify-content-center align-items-center">
+                <input type="number" id="value" class="input-field" />
+                <input type="button" value="Check if (-), (+) or (0)" onclick="handleCheck()" class="btn">
+            </div>
+            <div class="my-2" id="valueSign"></div>    
+            <h3>Part B</h3>
+            <div class="d-flex flex-row gap-2 w-100 mb-2 justify-content-center align-items-center">
+                <input type="number" id="max-a" class="input-field small-input" />
+                <input type="number" id="max-b" class="input-field small-input" />
+                <input type="number" id="max-c" class="input-field small-input" />
+            </div>
+            <input type="button" value="Check which value is bigger" onclick="handle3wayInput()" class="btn">
+            <div class="mt-2" id="max"></div>    
+        </div>
+    </section>
+
 
     <script src="../js/ex2.js"></script>
 </body>

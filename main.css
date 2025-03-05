@@ -11988,6 +11988,9 @@ textarea.form-control-lg {
   border-radius: 8px;
   border: 1px solid #ccc;
 }
+.input-field.small-input {
+  max-width: 70px;
+}
 
 /* Responsive button */
 .btn {
