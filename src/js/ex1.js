@@ -1,15 +1,20 @@
 'use strict'
 
 // 1.1
-const Sum = (valueA, valueB) => {
-  const num1 = parseFloat(document.getElementById("value-a").value)
-  const num2 = parseFloat(document.getElementById("value-b").value)
-  const result = num1 + num2
+const sum = (valueA, valueB) => {
+  const result = valueA + valueB
   document.getElementById("result").innerHTML = `The result is == ${result}`;
 
-  if (isNaN(num1) || isNaN(num2)) {
+  if (isNaN(valueA) || isNaN(valueB)) {
     document.getElementById("result").innerHTML = "Invalid numbers inputed";
   }
+}
+
+const handleSumInput = () => {
+  const num1 = parseFloat(document.getElementById("value-a").value);
+  const num2 = parseFloat(document.getElementById("value-b").value);
+
+  sum(num1, num2);
 }
 
 // 1.2
