@@ -60,7 +60,6 @@ const handleCheck = () => {
   }
 }
 
-
 const maxValue = (valueA, valueB, valueC) => {
   const _string = valueA > valueB ? `${valueA} is the bigger number` :
     valueB > valueC ? `${valueB} is the bigger number` : `${valueC} is the bigger number`;
@@ -79,4 +78,32 @@ const handle3wayInput = () => {
   else {
     maxValue(_valueA, _valueB, _valueC);
   }
+}
+
+// 2.4
+const checkParityInArray = (array) => {
+  var _string = "";
+  
+  if (array.some(isNaN)) {
+    _string = "Invalid input, check that there are no issues on the field";
+  }
+  else {
+    _string += "Parity checked: ";
+
+    array.forEach(element => {
+      if (!Number.isInteger(element)) {
+        _string = "Invalid input, decimal numbers are not valid";
+        return;
+      }
+      _string += (element % 2 == 0 ? "even" : "odd") + " ";
+    });
+  }
+
+  document.getElementById("parity").innerHTML = _string;
+}
+
+const handleParityInput = () => {
+  const input = document.getElementById("parityArray").value.trim();
+  const _array = input.split(/[\s,]+/).map(num => parseFloat(num.trim()));
+  checkParityInArray(_array);
 }
