@@ -103,3 +103,23 @@ const handlePlayerInput = () => {
 
     printPlayer(...array);
 }
+
+// 4.6
+const handleFuseInput = () => {
+    const _weaponType = document.getElementById("fs-wpType").value;
+    const _damage = parseFloat(document.getElementById("fs-dmg").value);
+    const _material = document.getElementById("fs-material").value;
+    const _weight = parseFloat(document.getElementById("fs-weight").value);
+
+    if (isNaN(_damage) || isNaN(_weight)) {
+        document.getElementById("weapon-obj").innerHTML = "Invalid input, numbers required";
+        return;
+    }
+
+    const obj_weapon = { name: _weaponType, damage: _damage };
+    const obj_material = { material: _material, weight: _weight };
+
+    const weapon = { ...obj_weapon, ...obj_material };
+
+    document.getElementById("weapon-obj").innerHTML = `The combined object is: ${JSON.stringify(weapon)}`;
+}

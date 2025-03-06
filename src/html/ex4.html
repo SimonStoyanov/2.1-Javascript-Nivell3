@@ -89,6 +89,28 @@
             <div class="mt-2" id="player"></div>    
         </div>
     </section>
+    <section class="card text-center mt-3 justify-content-center align-items-center">
+        <div class="card-body container-fluid m-2 lh-sm shadow">
+            <h1>Exercise 4.6</h1>
+            <div class="d-flex flex-row gap-2 w-100 justify-content-center align-items-center">
+                <select id="fs-wpType">
+                    <option value="Sword">Sword</option>
+                    <option value="Dagger">Dagger</option>
+                    <option value="Hammer">Hammer</option>
+                </select>
+                <input type="number" id="fs-dmg" class="input-field small-input" />
+                <div>+</div>
+                <select id="fs-material">
+                    <option value="Steel">Steel</option>
+                    <option value="Bronze">Bronze</option>
+                    <option value="Iron">Iron</option>
+                </select>
+                <input type="number" id="fs-weight" class="input-field small-input" />
+            </div>
+            <input type="button" value="Print weapon data" onclick="handleFuseInput()" class="btn mt-2">
+            <div class="mt-2" id="weapon-obj"></div>    
+        </div>
+    </section>
 
     <script src="../js/ex4.js"></script>
 </body>
