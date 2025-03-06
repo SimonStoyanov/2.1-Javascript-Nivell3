@@ -68,3 +68,17 @@ const handleCopyObjInput = () => {
             Cloned Weapon: ${clonedWeapon.type} ${clonedWeapon.power} cooldown: ${clonedWeapon.cooldown}`;
     }
 }
+
+// 4.4
+const handleDestrucuringInput = () => {
+    const _input = document.getElementById("array-dest").value.trim();
+    const _array = _input.split(/[\s,]+/);
+
+    if (_input == "") {
+        document.getElementById("destructured-array").innerHTML = "Invalid input";
+    }
+    else {
+        const [a, b, ...rest] = _array;
+        document.getElementById("destructured-array").innerHTML = `var a: ${a}, var b: ${b}, rest: ${rest}`;
+    }
+}
