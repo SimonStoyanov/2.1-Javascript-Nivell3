@@ -85,11 +85,31 @@ const handleArrayInput = () => {
   const _array = _input.split(/[\s,]+/);
 
   if (_input == "") {
-    console.log(_array);
-    document.getElementById("array-print").innerHTML = "Input string or numbers separated by ',' or ' '"
+    document.getElementById("array-print").innerHTML = "Input string or numbers separated by ',' or ' '";
   }
   else {
-    console.log(_array);
     processElements(_array, printArrayValue);
+  }
+}
+
+// 3.5
+function processString(_string, callback) {
+  const _newString = _string.toUpperCase();
+
+  callback(_newString);
+}
+
+function allCaps(_string) {
+  document.getElementById("string-print").innerHTML = `String converted: ${_string}`;
+}
+
+const handleStringInput = () => {
+  const _string = document.getElementById("string").value.trim();
+
+  if (_string == "") {
+    document.getElementById("string-print").innerHTML = "Invalid Input, please add text to the field";
+  }
+  else {
+    processString(_string, allCaps);
   }
 }
