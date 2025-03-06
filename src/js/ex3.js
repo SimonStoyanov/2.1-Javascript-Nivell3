@@ -64,3 +64,32 @@ const handleGreetInput = () => {
     waitAndGreet(_name, greet);
   }
 }
+
+// 3.4
+function processElements(_array, callback) {
+  document.getElementById("array-print").innerHTML = "Your Array is: [ "
+
+  _array.forEach(element => {
+    callback(element);
+  });
+
+  document.getElementById("array-print").innerHTML += "]";
+}
+
+function printArrayValue(_value) {
+  document.getElementById("array-print").innerHTML += `'${_value}' `;
+}
+
+const handleArrayInput = () => {
+  const _input = document.getElementById("array").value.trim();
+  const _array = _input.split(/[\s,]+/);
+
+  if (_input == "") {
+    console.log(_array);
+    document.getElementById("array-print").innerHTML = "Input string or numbers separated by ',' or ' '"
+  }
+  else {
+    console.log(_array);
+    processElements(_array, printArrayValue);
+  }
+}
