@@ -15,3 +15,25 @@ const handleCombineInput = () => {
         document.getElementById("combine").innerHTML = `New Array: [${_newArray}]`;
     }
 }
+
+// 4.2
+function addAllValues(...values) {
+    let res = 0;
+    for (const _value of values) {
+        res += _value;
+    }
+
+    document.getElementById("addition").innerHTML = `Result: ${res}`;
+}
+
+const handleAdditionInput = () => {
+    const _input = document.getElementById("numbersArray").value.trim();
+    const _array = _input.split(/[\s,]+/).map(Number);
+
+    if (_array.some(isNaN) || _input == "") {
+       document.getElementById("addition").innerHTML = "Input invalid, only use numbers";
+    }
+    else {
+        addAllValues(..._array);
+    }
+}
