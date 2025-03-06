@@ -42,3 +42,25 @@ const handleCalcInput = () => {
     calculator(_valueA, _valueB, addValues);
   }
 }
+
+// 3.3
+function waitAndGreet(_name, callback) {
+  setTimeout(() => {
+    callback(_name);
+  }, 2000);
+}
+
+function greet(_name) {
+  document.getElementById("greet").innerHTML = `Hi ${_name}!`;
+}
+
+const handleGreetInput = () => {
+  const _name = document.getElementById("name").value;
+
+  if (_name == "") {
+   document.getElementById("greet").innerHTML = "Input a valid text";
+  }
+  else {
+    waitAndGreet(_name, greet);
+  }
+}
