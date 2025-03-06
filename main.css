@@ -12005,4 +12005,13 @@ textarea.form-control-lg {
 .btn:hover {
   background-color: #4a7bbd;
   color: white;
+}
+
+select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: rgb(96, 197, 96);
+}
+select option {
+  background-color: white;
 }/*# sourceMappingURL=main.css.map */

@@ -42,6 +42,22 @@
             <div class="mt-2" id="addition"></div>    
         </div>
     </section>
+    <section class="card text-center mt-3 justify-content-center align-items-center">
+        <div class="card-body container-fluid m-2 lh-sm shadow">
+            <h1>Exercise 4.3</h1>
+            <div class="d-flex flex-row gap-2 w-100 justify-content-center align-items-center">
+                <select name="Weapon Type" id="wp-type">
+                    <option value="Spear">Spear</option>
+                    <option value="Sword">Sword</option>
+                    <option value="Dagger">Dagger</option>
+                </select>
+                <input type="number" id="wp-power" class="input-field small-input" />
+                <input type="number" id="wp-cooldown" class="input-field small-input" />
+            </div>
+            <input type="button" value="Clone, then increase original power by 1" onclick="handleCopyObjInput()" class="btn mt-2">
+            <div class="mt-2" id="weapons"></div>    
+        </div>
+    </section>
 
     <script src="../js/ex4.js"></script>
 </body>
