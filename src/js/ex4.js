@@ -82,3 +82,24 @@ const handleDestrucuringInput = () => {
         document.getElementById("destructured-array").innerHTML = `var a: ${a}, var b: ${b}, rest: ${rest}`;
     }
 }
+
+// 4.5
+function printPlayer(_name, _rank, _class) {
+    document.getElementById("player").innerHTML = `Player name: ${_name}, rank: ${_rank} & class: ${_class}`;
+}
+
+const handlePlayerInput = () => {
+    const _name = document.getElementById("pl-name").value;
+    
+    if (_name == "") {
+        document.getElementById("player").innerHTML = "Invalid name";
+        return;
+    }
+
+    const _rank = document.getElementById("pl-rank").value;
+    const _class = document.getElementById("pl-class").value;
+
+    const array = [_name, _rank, _class];
+
+    printPlayer(...array);
+}

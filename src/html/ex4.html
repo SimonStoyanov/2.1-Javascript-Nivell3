@@ -69,6 +69,26 @@
             <div class="mt-2" id="destructured-array"></div>    
         </div>
     </section>
+    <section class="card text-center mt-3 justify-content-center align-items-center">
+        <div class="card-body container-fluid m-2 lh-sm shadow">
+            <h1>Exercise 4.5</h1>
+            <div class="d-flex flex-row gap-2 w-100 justify-content-center align-items-center">
+                <input type="text" id="pl-name" class="input-field small-input" />
+                <select name="Rank" id="pl-rank">
+                    <option value="Uncommon">Uncommon</option>
+                    <option value="Epic">Epic</option>
+                    <option value="Legend">Legend</option>
+                </select>
+                <select name="Class" id="pl-class">
+                    <option value="Fighter">Fighter</option>
+                    <option value="Thief">Thief</option>
+                    <option value="Wizard">Wizard</option>
+                </select>
+            </div>
+            <input type="button" value="Print player data" onclick="handlePlayerInput()" class="btn mt-2">
+            <div class="mt-2" id="player"></div>    
+        </div>
+    </section>
 
     <script src="../js/ex4.js"></script>
 </body>
