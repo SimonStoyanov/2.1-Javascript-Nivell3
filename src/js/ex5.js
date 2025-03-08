@@ -33,3 +33,11 @@ const arrayReduce = () => {
 
     document.getElementById("array-reduce").innerHTML = `Reduced value: ${sum}`;
 }
+
+// 5.5
+const arrayComplex = () => {
+    let array = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
+    const res = array.filter(n => n >= 10).map(n => n*2).reduce((acc, n) => acc + n);
+
+    document.getElementById("array-complex").innerHTML = `Result: ${res}`;
+}
