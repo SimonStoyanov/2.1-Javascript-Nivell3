@@ -25,3 +25,11 @@ const arrayFind = () => {
 
     document.getElementById("array-find").innerHTML = `Found value: ${nOver10}`;
 }
+
+// 5.4
+const arrayReduce = () => {
+    let array = [13, 7, 8, 21];
+    const sum = array.reduce((acc, n) => acc + n);
+
+    document.getElementById("array-reduce").innerHTML = `Reduced value: ${sum}`;
+}
