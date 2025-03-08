@@ -15,4 +15,7 @@ const pr_helloWorld = () => {
     delayedPrint().then((str) => {
         document.getElementById("pr-hello").innerHTML = str;
     });
+    // 7.2
+    delayedPrint().then((str) => {console.log(str)});
 }
+
