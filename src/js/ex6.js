@@ -23,3 +23,12 @@ const printForOf = () => {
 
     document.getElementById("print-forOf").innerHTML = `Print: ${str}`;
 }
+
+// 6.3
+const arrayFiltered = () => {
+    let array = [1, 2, 3, 4, 5, 6];
+
+    array = array.filter(n => n % 2 == 0);
+
+    document.getElementById("print-filtered").innerHTML = `New Array: [${String(array)}]`;
+}
