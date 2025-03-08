@@ -62,3 +62,16 @@ const printForOf_Break = () => {
 
     document.getElementById("print-forOfBreak").innerHTML = `Print: [ ${str}]`;
 }
+
+// 6.6
+const printForOf_Index = () => {
+    let names = ["Anna", "Bernat", "Clara"];
+
+    let str = "";
+    let i = 0;
+    for (const element of names) {
+        str += element + " index: " + i++ + "<br\>";
+    }
+
+    document.getElementById("print-forOfIndex").innerHTML = `Print: <br\>${str}`;
+}
