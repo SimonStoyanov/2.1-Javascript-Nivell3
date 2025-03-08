@@ -41,3 +41,17 @@ const arrayComplex = () => {
 
     document.getElementById("array-complex").innerHTML = `Result: ${res}`;
 }
+
+// 5.6
+const arrayEvery = () => {
+    let array = [11, 12, 13, 14];
+    const isEvery = array.every(n => n >= 10);
+
+    document.getElementById("array-every").innerHTML = `${isEvery}`;
+}
+const arraySome = () => {
+    let array = [11, 12, 13, 14];
+    const isSome = array.some(n => n >= 10);
+
+    document.getElementById("array-some").innerHTML = `${isSome}`;
+}
