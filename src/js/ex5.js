@@ -17,3 +17,11 @@ const arrayEven = () => {
 
     document.getElementById("array-even").innerHTML = `The new values are: [${String(array)}]`;
 }
+
+// 5.3
+const arrayFind = () => {
+    let array = [1, 10, 8, 11];
+    const nOver10 = array.find(n => n > 10);
+
+    document.getElementById("array-find").innerHTML = `Found value: ${nOver10}`;
+}
