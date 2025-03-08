@@ -48,3 +48,17 @@ const printForIn = () => {
 
     document.getElementById("print-forIn").innerHTML = `Print: { ${str}}`;
 }
+
+// 6.5
+const printForOf_Break = () => {
+    let numbers = [1, 2, 3, 4, 5, 6];
+
+    let str = "";
+    for (const element of numbers) {
+        if (element == 5)   break;
+
+        str += element + " ";
+    }
+
+    document.getElementById("print-forOfBreak").innerHTML = `Print: [ ${str}]`;
+}
