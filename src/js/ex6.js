@@ -32,3 +32,19 @@ const arrayFiltered = () => {
 
     document.getElementById("print-filtered").innerHTML = `New Array: [${String(array)}]`;
 }
+
+// 6.4
+const printForIn = () => {
+    let obj = {
+        name: "Ona",
+        age: 25,
+        city: "Barcelona"
+    };
+
+    let str = "";
+    for (const key in obj) {
+        str += key + ": " + obj[key] + " ";
+    }
+
+    document.getElementById("print-forIn").innerHTML = `Print: { ${str}}`;
+}
