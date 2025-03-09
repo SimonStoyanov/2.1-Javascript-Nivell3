@@ -53,3 +53,33 @@ async function asyncHelloWorld() {
     const res = await delayedPrint();
     document.getElementById("async").innerHTML = `Async Print: ${res}`;
 }
+
+// 7.5
+function delayedPrint_alt() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (Math.random() > 0.4) {
+                resolve("Hello World!");
+            }
+            else {
+                reject("Error!")
+            }
+        }, 2000);
+    });
+}
+
+const handleAsyncWCatch = () => {
+    document.getElementById("pr-hello-alt").innerHTML = "Waiting...";
+
+    asyncHelloWorld_alt();
+}
+
+async function asyncHelloWorld_alt() {
+    try {
+        const res = await delayedPrint_alt();
+        document.getElementById("pr-hello-alt").innerHTML = `Async Print: ${res}`;
+    } 
+    catch (error) {
+        document.getElementById("pr-hello-alt").innerHTML = `Async Print: ${error}`;
+    }
+}
