@@ -17,6 +17,9 @@ const pr_helloWorld = () => {
     });
     // 7.2
     delayedPrint().then((str) => {console.log(str)});
+
+    // 7.4 - line 51
+    asyncHelloWorld();
 }
 
 // 7.3
@@ -43,4 +46,10 @@ const pr_isHello = () => {
     checkInput(_input)
         .then((message) => { _output.innerHTML = `${message}` })
         .catch((error) => { _output.innerHTML = `${error}` });
+}
+
+// 7.4
+async function asyncHelloWorld() {
+    const res = await delayedPrint();
+    document.getElementById("async").innerHTML = `Async Print: ${res}`;
 }
