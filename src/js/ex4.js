@@ -43,10 +43,12 @@ function copyObject(obj) {
     return new Weapon(...Object.values(obj));
 }
 
-function Weapon(_type, _power, _cooldown) {
-    this.type = _type;
-    this.power = _power;
-    this.cooldown = _cooldown;
+class Weapon {
+    constructor(_type, _power, _cooldown) {
+        this.type = _type;
+        this.power = _power;
+        this.cooldown = _cooldown;
+    }
 }
 
 const handleCopyObjInput = () => {

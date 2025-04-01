@@ -19,7 +19,7 @@ const handleSumInput = () => {
 
 // 1.2
 const randomNumber = () => {
-  var rand = Math.floor(Math.random() * 100);
+  const rand = Math.floor(Math.random() * 100);
   document.getElementById("rand").innerHTML = `Generated a random number: ${rand}`;
 }
 
@@ -41,27 +41,27 @@ class Person {
 
 const Greet = () => {
   const inputName = document.getElementById("name").value;
-  const _person = new Person(inputName);
+  const person = new Person(inputName);
 
-  _person.greet();
+  person.greet();
 }
 
 // 1.4
 const printNumbers = (arrayNum) => {
-  var _string = "";
+  let string = "";
   
   arrayNum.forEach(element => {
-    _string += element + " "
+    string += element + " ";
     console.log(element);
   });
 
-  document.getElementById("loopNum").innerHTML = `Array inputed: ${_string}`;
+  document.getElementById("loopNum").innerHTML = `Array inputed: ${string}`;
 }
 
 const handleArrayInput = () => {
   const input = document.getElementById("numArray").value;
-  const _array = input.split(/[\s,]+/).map(num => parseFloat(num.trim()));
-  printNumbers(_array);
+  const arr = input.split(/[\s,]+/).map(num => parseFloat(num.trim()));
+  printNumbers(arr);
 }
 
 // 1.5

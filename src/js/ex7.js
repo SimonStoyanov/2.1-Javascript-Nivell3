@@ -57,14 +57,13 @@ async function asyncHelloWorld() {
 // 7.5
 function delayedPrint_alt() {
     return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (Math.random() > 0.4) {
+        if (Math.random() > 0.4) {
+            setTimeout(() => {
                 resolve("Hello World!");
-            }
-            else {
-                reject("Error!")
-            }
-        }, 2000);
+            }, 2000);
+        } else {
+            reject("Error!")
+        }
     });
 }
 
